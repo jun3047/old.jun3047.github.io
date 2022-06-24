@@ -9,11 +9,13 @@
     margin: 0 auto;
     text-align: center;
     width: 600px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    /* border: 1px solid black; */
     height: 100%;
 }
 
-header{
+header, main{
+    margin: 0 10px;
     display: flex;
     justify-content: center;
 }
@@ -36,6 +38,12 @@ h1{
     margin-bottom: 30px;
 }
 
+#meun{
+    display: flex;
+    justify-content: center;
+
+}
+
 ul{
     width: 300px;
     margin-top: 30px;
@@ -51,19 +59,15 @@ ul{
     font-size: 15px;
     border: 0.1px solid gray;
     border-radius: 5px;
+    width: 13px;
 }
 
 #main-inner{
     margin: 0 auto;
     text-align: center;
     width: 600px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100%;
-}
-
-main{
-    display: flex;
-    justify-content: center;
 }
 
 #main-title{
@@ -84,9 +88,19 @@ section{
 }
 
 article{
+    margin: 20px 0;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2.6fr 1fr;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid gray;    
+    border-radius: 5px;
+}
+
+h3{
+    text-align: center;
+}
+
+#post #info {
+    color: gray;
 }
