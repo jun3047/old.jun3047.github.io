@@ -56,8 +56,7 @@ ul{
 #meun-item:hover{
     background-color: black;
     color: white;
-    transition-property: all;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
 }
@@ -68,17 +67,14 @@ ul{
     border: 0.1px solid black;
     border-radius: 5px;
     width: 40px;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
+    transition-duration: 0.2s;
 }
+
 
 #main-inner{
     margin: 0 auto;
     text-align: center;
     width: 600px;
-    /* border: 1px solid black; */
     height: 100%;
     border-top: 1px solid black;
 }
