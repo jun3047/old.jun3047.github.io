@@ -11,9 +11,15 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap"
 		rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
+	<div id="content"></div>
+	<script>
+		document.getElementById('content').innerHTML =
+		marked.parse('# Marked in browser\n\nRendered by **marked**.');
+	</script>
 	<header>
 		<div id="header-inner">
 			<div id="header-title">
