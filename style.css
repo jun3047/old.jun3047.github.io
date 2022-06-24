@@ -20,6 +20,7 @@ header, main, footer{
     justify-content: center;
 }
 
+
 #header-title{
     display: flex;
     justify-content: center;
@@ -35,13 +36,12 @@ h1{
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 #meun{
     display: flex;
     justify-content: center;
-
 }
 
 ul{
@@ -54,7 +54,7 @@ ul{
 }
 
 #meun-item:hover{
-    background-color: rgba(0, 0, 0, 0.922);
+    background-color: black;
     color: white;
     transition-property: all;
     transition-duration: 0.3s;
@@ -96,6 +96,10 @@ h2{
     font-size: 24px;
 }
 
+section #post:hover{
+    border-color: black;
+}
+
 article{
     background-color: inherit;
     margin: 20px 0;
@@ -104,7 +108,7 @@ article{
     color: inherit;
     grid-template-columns: 3fr 1fr;
     justify-content: center;
-    border: 1px solid gray;    
+    border: 1px solid rgba(128, 128, 128, 0.5);    
     border-radius: 5px;
 }
 
@@ -120,8 +124,8 @@ h3{
     font-size: 16px;
 }
 
-#post #info { /*test*/
-    display: none;   
+#post #info { 
+    display: none; /*test*/   
     position: relative;
     top: 12px;
     left: 28px;;
