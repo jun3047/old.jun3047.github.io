@@ -1,11 +1,17 @@
-const path = require("path");
-const fs = require("fs");
+// /*eslint-env browser*/
 
-const directoryPath = path.join(__dirname, "post");
+// // 모듈
+// const path = require("path");
+const fs = require("fs")
 
-const contentFiles = fs.readdirSync(directoryPath);
+// // contents 디렉토리 경로
+// const directoryPath = path.join(__dirname, "post");
+// console.log(directoryPath);
+// // 디렉토리에 있는 파일 읽기
+// const contentFiles = fs.readdirSync(directoryPath);
+// // console.log(contentFiles);
 
-const hljs = require("highlight.js");
+// const hljs = require("highlight.js");
 
 const md = require("markdown-it")({
   html: false,
@@ -33,23 +39,15 @@ const md = require("markdown-it")({
 });
 
 
+const body = fs.readFileSync(`./README.md`, "utf8");
+const convertedBody = md.render(body);
 
-contentFiles.map(file => {
-    const body = fs.readFileSync(`./post/${file}`, "utf8");
-    const convertedBody = md.render(body); // 이 부분을 추가해주세요!
-    console.log(convertedBody);  
-});
-  
+// console.debug(convertedBody);
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
-// list_format.html파일 읽기
-const listHtmlFormat = fs.readFileSync("./templates/list_format.html", "utf8");
+global.document = new JSDOM(html).window.document;
 
-// index.html파일 생성 / 파일 목록 렌더
-const listContent = ejs.render(listHtmlFormat, {
-  lists: deployFiles
-});
-const listHtml = ejs.render(layoutHtmlFormat, {
-  content: listContent
-});
+document.getElementById('content').innerHTML = "convertedBody";
 
-fs.writeFileSync("./index.html", listHtml);
+console.debug(document);

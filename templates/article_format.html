@@ -1,0 +1,29 @@
+<div class="article">
+  <div class="article__value">
+    <h1>
+      <%=title %>
+    </h1>
+    <p>
+      <%=date %>
+    </p>
+  </div>
+  <div class="article__body">
+
+    <%- body %>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+
+
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = "<%= disqus %>"
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
